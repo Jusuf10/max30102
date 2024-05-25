@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <h1>SENSOR READINGS (WEBSOCKET)</h1>
+    </div>
+    <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                <p class="card-title"><i class="fas fa-thermometer-threequarters" style="color:#059e8a;"></i>
+                    Signal</p>
+                <p class="reading"><span id="signal"></span></p>
+            </div>
+
+            <!-- ini buat grafik -->
+            <div>
+                <script src="https://code.highcharts.com/highcharts.js"></script>
+                <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+                <figure class="highcharts-figure">
+                    <div id="container"></div>
+                    <p class="highcharts-description">
+                        This chart shows the use of a logarithmic y-axis. Logarithmic axes can
+                        be useful when dealing with data with spikes or large value gaps,
+                        as they allow variance in the smaller values to remain visible.
+                    </p>
+                </figure>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
